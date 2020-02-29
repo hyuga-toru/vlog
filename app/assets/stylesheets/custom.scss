@@ -1,0 +1,159 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+  background-color: #DDDDDD;
+  color:#000000
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* うるぞーのブログ１から */
+
+
+
+.marign-top-5per{
+    margin-top: 5%;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.bg-white{
+    background-color :white;
+}
+
+.article-block{
+    background-color: white;
+    border: 1px solid #BBBBBB;
+}
+
+.article-block-2{
+    background-color: white;
+    border: 1px solid #BBBBBB;
+    width: 700px;
+    height: 120px;
+}
+
+.padding-top-15{
+    padding-top: 15px;
+}
+
+.padding-bottom-15{
+    padding-bottom: 15px;
+}
+
+a{
+    color: #666666;
+}
+
+
+/* 画像設定 */
+  
+.article-image{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.article-list-image{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+#cover-imge{
+  cursor: pointer ;
+}
+
+.relative{
+  position: relative;
+  
+  i{
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    color: white;
+    font-size: 60px;
+  }
+}
+
+/* カレンダー全体の設定 */
+.calendar {
+  border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+  width: 40px;
+  height: 25px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/* 日曜日 */
+.calendar th:nth-child(1),
+.calendar td:nth-child(1) {
+  color: #f00;
+  background-color: #fcc;
+}
+
+/* 土曜日 */
+.calendar th:nth-child(7),
+.calendar td:nth-child(7) {
+  color: #00f;
+  background-color: #ccf;
+}
+
+/* 記事一覧のarticle */
+#content_main .article figure img {
+	border-radius: 50px;
+
+}
+
+/* 記事一覧のfigure */
+/* 
+#content_main .article figure {
+	float: left; 
+	height: 200px;
+	width: 200px; 
+	margin: 0;
+}
+*/
+
+
+/* 記事一覧のimg */
+#content_main .article figure img {
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+
+/* 記事一覧の詳細部分 */
+
+
+
+
+
+

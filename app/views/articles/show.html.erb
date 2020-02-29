@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="page-header">
+        <h1>
+            <%= @article.name %>
+        </h1>
+    </div>
+    <div class="col-md-8 per margin-top-5article-block">
+        <div class="form-group", article: @article >
+            <div id="cover-imge" class="form-group padding-top-15 relative">
+        
+                <% if @article.image_id.present? %>
+                    <%= image_tag attachment_url(@article, :image), class: 'article-image padding-top-15', style: 'max-height: 150px; width: 100%; object-fit: cover' %>
+                <% else %>
+                    <%= image_tag 'gray-bg.jpg', class: 'article-image padding-top-15', style: 'max-height: 150px; width: 100%; object-fit: cover' %>
+                <% end %>
+                <i class="fa fa-camera"></i>
+            </div> 
+        </div>  
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                主催者
+            </div>
+            <div class="panel-body">
+                <p>@<%= @article.user.name %></p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                開催時間
+            </div>
+            <div class="panel-body">
+                <%= @article.start_time.strftime("%Y年%m月%d日%-H時%-M分") %> - <%= @article.end_time.strftime("%Y年%m月%d日%-H時%-M分") %> 　　　
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                開催場所
+            </div>
+            <div class="panel-body">
+                <p><%= @article.place %></p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                イベント内容
+            </div>
+            <div class="panel-body">
+                <P><%= simple_format @article.content %></P>
+            </div>
+        </div>
+        <%= link_to '編集', edit_article_path(@article), class: 'btn btn-primary', style: 'margin-bottom: 10px' %>
+        <%= link_to '削除する', article_path(@article), method: :delete, data: {confirm: '削除してもよろしいですか？'}, class: 'btn btn-danger', style: 'margin-bottom: 10px' %>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="text-right">
+                    <%= render 'calender', article: @article %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
